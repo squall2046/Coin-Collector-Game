@@ -1,14 +1,13 @@
 /* Isaac Wu Crystal Collector Game */
 
-
+/* ===============general================= */
 body {
     background: url(../images/mario.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
-
-.topic, .intro{
-    margin-top: 20px;
+.topic, .intro {
+    margin-top: 10px;
     padding: 10px;
     text-align: center;
     color: white;
@@ -18,21 +17,23 @@ body {
     font-family: 'Finger Paint', cursive;
     font-weight: bolder;
 }
-.topicgif{
+.topicgif {
     width: 35px;
     padding-bottom: 10px;
 }
-
-.givennum {
-    margin: 10px;
-    border: 10px solid gold;
-    border-style: dotted;
-    padding: 10px;
+footer {
+    bottom: 0px;
     text-align: center;
-    background-color: rgba(65, 152, 192, 0.7)
+    font-size: 16px;
+    color: rgb(100, 100, 100);
+    height: 40px;
 }
 
-.condition{
+/* =================Boxes================= */
+/* Box1 random coin & Box2 total score: */
+.number-text, .score{
+    height: 150px;
+    padding: 10px;
     margin: 10px;
     border: 10px solid gold;
     border-style: dotted;
@@ -40,38 +41,60 @@ body {
     font-family: 'Finger Paint', cursive;
     text-align: center;
     color: white;
-    background-color: rgba(218, 122, 122, 0.7)
+    background-color: rgba(65, 152, 192, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.score{
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#random-number, #total-score{
+    font-size: 70px;
+    line-height: 1;
+    color: black;
+    overflow: hidden;
 }
 
+/* Box-set questions/coins: */
 .coinpic {
     position: relative;
-    width:80px;
-    height: 80px;
-    margin: 20px 30px;
+    width: 70px;
+    height: 70px;
+    margin: 30px 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .coinpic:hover {
-    width:75px;
-    height: 75px;}
-
+    opacity: .8;
+}
 .coinpic:active{
-    margin-top: -5px;
+    /* margin-top: 10px; */
+    -webkit-filter: invert(100%);filter: invert(100%);
 }
 
-.score{
-    margin: 10px;
+/* Box3 condition wins/losses times: */
+.condition{
+    height: 193px;
+    padding: 20px;
+    margin: 10px 20px;
     border: 10px solid gold;
     border-style: dotted;
-    padding: 10px;
     font-family: 'Finger Paint', cursive;
     text-align: center;
     color: white;
-    background-color: rgba(0, 0, 0, 0.7)
-
+    background-color: rgba(218, 122, 122, 0.7);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+#wins, #losses{
+    font-size: 30px;
+    line-height: .5;
+    color: black;
+}
+
+/* Box4 mario coin picture: */
 .mariopic{
     width:193px;
     height: 193px;
     border-radius: 50%;
-    margin: 10px;
+    margin: 10px 50px 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
