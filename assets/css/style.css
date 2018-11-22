@@ -1,0 +1,77 @@
+/* Isaac Wu Crystal Collector Game */
+
+
+body {
+    background: url(../images/mario.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.topic, .intro{
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    /* font-family: 'Sigmar One', cursive; */
+    /* font-family: 'Freckle Face', cursive; */
+    /* font-family: 'Bungee Inline', cursive; */
+    font-family: 'Finger Paint', cursive;
+    font-weight: bolder;
+}
+.topicgif{
+    width: 35px;
+    padding-bottom: 10px;
+}
+
+.givennum {
+    margin: 10px;
+    border: 10px solid gold;
+    border-style: dotted;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(65, 152, 192, 0.7)
+}
+
+.condition{
+    margin: 10px;
+    border: 10px solid gold;
+    border-style: dotted;
+    padding: 10px;
+    font-family: 'Finger Paint', cursive;
+    text-align: center;
+    color: white;
+    background-color: rgba(218, 122, 122, 0.7)
+}
+
+.coinpic {
+    position: relative;
+    width:80px;
+    height: 80px;
+    margin: 20px 30px;
+}
+
+.coinpic:hover {
+    width:75px;
+    height: 75px;}
+
+.coinpic:active{
+    margin-top: -5px;
+}
+
+.score{
+    margin: 10px;
+    border: 10px solid gold;
+    border-style: dotted;
+    padding: 10px;
+    font-family: 'Finger Paint', cursive;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7)
+
+}
+.mariopic{
+    width:193px;
+    height: 193px;
+    border-radius: 50%;
+    margin: 10px;
+}
