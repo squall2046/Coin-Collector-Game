@@ -15,6 +15,7 @@ body {
     /* font-family: 'Freckle Face', cursive; */
     /* font-family: 'Bungee Inline', cursive; */
     font-family: 'Finger Paint', cursive;
+    font-size: 40px;
     font-weight: bolder;
 }
 .topicgif {
@@ -98,3 +99,27 @@ footer {
     margin: 10px 50px 60px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+
+/*--========================================================================================================================================
+ MEDIA QUERY       MEDIA QUERY       MEDIA QUERY       MEDIA QUERY       MEDIA QUERY       MEDIA QUERY       MEDIA QUERY       MEDIA QUERY
+==========================================================================================================================================-*/
+  /*-------------------- media query must set at the bottom of css file, or it will be overwrited by css style --------------------------*/
+
+  @media (max-width: 540px) {
+
+    .topic, .intro {
+        font-size: 20px;
+    }
+    .topicgif {
+        width: 20px;
+        padding-bottom: 10px;
+    }
+
+    .coinpic {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        left: 40%;
+    }
+  }
