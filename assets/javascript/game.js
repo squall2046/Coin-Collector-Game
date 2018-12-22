@@ -16,7 +16,7 @@ $(document).ready(function () {
     var coinNum4 = Math.floor(Math.random() * 2) + 1;
     console.log(coinNum4);
 
-    function reset (){
+    function reset() {
         randomNum = Math.floor(Math.random() * 101) + 19;
         coinNum1 = Math.floor(Math.random() * 4) + 9;
         coinNum2 = Math.floor(Math.random() * 3) + 6;
@@ -27,6 +27,13 @@ $(document).ready(function () {
         $("#total-score").empty();
     }
 
+    function clickbox() {
+        $("#total-score").text(totalScore);
+        $("#mariocontain").html('<img src="assets/images/coin3.gif" class="mariopic">');
+        var boxSound = new Audio('assets/sound/smb_coin.mp3');
+        boxSound.play();
+    }
+
     //==== Box1 random coin:
     $("#random-number").text(randomNum);
 
@@ -34,41 +41,25 @@ $(document).ready(function () {
     // #coin1
     $("#coin1").on("click", function () {
         totalScore += coinNum1; // totalScore = totalScore + coinNum1;
-        console.log(totalScore);
-        $("#total-score").text(totalScore);
-        $("#mariocontain").html('<img src="assets/images/coin3.gif" class="mariopic">');
-        var boxSound = new Audio('assets/sound/smb_coin.mp3');
-        boxSound.play();
+        clickbox();
         decide();
     })
     // #coin2
     $("#coin2").on("click", function () {
         totalScore += coinNum2;
-        console.log(totalScore);
-        $("#total-score").text(totalScore);
-        $("#mariocontain").html('<img src="assets/images/coin3.gif" class="mariopic">');
-        boxSound = new Audio('assets/sound/smb_coin.mp3');
-        boxSound.play();
+        clickbox();
         decide();
     })
     // #coin3
     $("#coin3").on("click", function () {
         totalScore += coinNum3;
-        console.log(totalScore);
-        $("#total-score").text(totalScore);
-        $("#mariocontain").html('<img src="assets/images/coin3.gif" class="mariopic">');
-        boxSound = new Audio('assets/sound/smb_coin.mp3');
-        boxSound.play();
+        clickbox();
         decide();
     })
     // #coin4
     $("#coin4").on("click", function () {
         totalScore += coinNum4;
-        console.log(totalScore);
-        $("#total-score").text(parseInt(totalScore));
-        $("#mariocontain").html('<img src="assets/images/coin3.gif" class="mariopic">');
-        boxSound = new Audio('assets/sound/smb_coin.mp3');
-        boxSound.play();
+        clickbox();
         decide();
     })
     //#clear
@@ -81,26 +72,26 @@ $(document).ready(function () {
     // totalScore = randomNum;
 
     //==== Box3 condition wins/losses times & Box4 mario coin picture:
-    function decide(){
-    if (totalScore === randomNum) {
-        winTimes++;
-        $("#wins").text(winTimes);
-        $("#result").text("You Win !");
-        $("#mariocontain").html('<img src="assets/images/coin4.gif" class="mariopic">');
-        var winSound = new Audio('assets/sound/sm64_1-up.mp3');
-        winSound.play();
-        reset();
-    } else if (totalScore > randomNum) {
-        lossTimes++;
-        $("#losses").text(lossTimes);
-        $("#result").text("Oh No !");
-        $("#mariocontain").html('<img src="assets/images/gameover.jpg" class="mariopic">');
-        var lossSound = new Audio('assets/sound/smb_mariodie.mp3');
-        lossSound.play();
-        reset();
-    } else {
-        $("#result").text("");
+    function decide() {
+        if (totalScore === randomNum) {
+            winTimes++;
+            $("#wins").text(winTimes);
+            $("#result").text("You Win !");
+            $("#mariocontain").html('<img src="assets/images/coin4.gif" class="mariopic">');
+            var winSound = new Audio('assets/sound/sm64_1-up.mp3');
+            winSound.play();
+            reset();
+        } else if (totalScore > randomNum) {
+            lossTimes++;
+            $("#losses").text(lossTimes);
+            $("#result").text("Oh No !");
+            $("#mariocontain").html('<img src="assets/images/gameover.jpg" class="mariopic">');
+            var lossSound = new Audio('assets/sound/smb_mariodie.mp3');
+            lossSound.play();
+            reset();
+        } else {
+            $("#result").text("");
+        }
     }
-}
 
 });
