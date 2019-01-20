@@ -3,7 +3,7 @@ A fun and interactive game for web browsers. The player will have to guess the i
 
 > Click  >>>**[Here](https://squall2046.github.io/Coin-Collector-Game/)**<<<  to check the application.
 
-## :mushroom:Synopsis:
+## 🎲Synopsis:
 
 Here's how the app works:
    * There will be four boxes displayed as buttons on the page.
@@ -23,14 +23,14 @@ Here's how the app works:
    
    ![Game Sample](/assets/images/readme-lose.gif)
 
-## :mushroom:Technologies:
+## 🎲Technologies:
 - [x] HTML5
 - [x] JavaScript
 - [x] JQuery
 - [x] CSS
 - [x] Bootstrap
 
-## :mushroom:Author:
+## 🎲Author:
 * [Isaac Wu](https://github.com/squall2046)
 * [Game Repo](https://github.com/squall2046/Coin-Collector-Game)
 
